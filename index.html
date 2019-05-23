@@ -48,13 +48,20 @@
 <a href=https://www.nba.com/>NBA</a>
 </p>
 
-<p>This example uses the addEventListener() method to attach a click event to a button.</p>
-
 <button id="myBtn">Try it</button>
 
 <script>
 document.getElementById("myBtn").addEventListener("click", function() {
   alert("Go Warriors!");
+});
+document.addEventListener('DOMContentLoaded', function(event) {
+  let clicks = 0;
+  const div1 = document.getElementById('div1');
+  div1.addEventListener('click', function() {
+    clicks++;
+	div1.innerHTML = 'Clicked ' + clicks + ' times!';
+  });
+
 });
 </script>
 </body>
